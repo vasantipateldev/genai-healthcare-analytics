@@ -1,0 +1,51 @@
+patient_id,age,gender,condition,bmi,systolic_bp,blood_glucose,smoker,hospital_visits_last_year,readmitted_within_30_days
+P001,64,Male,Heart Disease,29.8,131,109,No,6,Yes
+P002,61,Female,Diabetes,36.3,149,220,Yes,3,No
+P003,58,Female,Healthy,24.5,110,97,No,0,No
+P004,54,Female,Healthy,20.1,122,87,No,0,No
+P005,42,Female,Healthy,26.5,113,88,Yes,1,No
+P006,58,Male,Asthma,25.4,125,87,No,7,No
+P007,60,Male,Asthma,24.2,132,94,Yes,4,No
+P008,43,Male,Diabetes,32.7,148,164,No,6,Yes
+P009,62,Female,Heart Disease,33.9,133,110,No,4,No
+P010,62,Female,Healthy,23.3,123,80,Yes,0,No
+P011,65,Male,Heart Disease,30.7,146,115,No,5,No
+P012,22,Female,Asthma,27.0,110,110,Yes,6,No
+P013,61,Female,Diabetes,29.8,121,173,No,7,No
+P014,26,Male,Healthy,26.2,116,94,No,3,No
+P015,61,Male,Diabetes,35.7,146,168,No,9,No
+P016,29,Female,Healthy,22.5,113,100,No,2,No
+P017,65,Female,Hypertension,32.3,166,126,No,4,No
+P018,77,Male,Hypertension,32.3,159,92,No,5,No
+P019,51,Female,Hypertension,27.7,173,122,No,8,No
+P020,35,Female,Healthy,23.3,109,88,No,3,No
+P021,46,Male,Hypertension,28.3,174,107,No,7,No
+P022,23,Female,Healthy,20.7,113,90,Yes,0,No
+P023,19,Male,Healthy,22.7,110,84,No,0,No
+P024,37,Male,Asthma,23.7,125,108,Yes,6,No
+P025,23,Female,Healthy,22.0,120,85,No,1,No
+P026,66,Female,Diabetes,34.1,142,210,No,5,Yes
+P027,52,Male,Diabetes,29.1,139,169,No,4,No
+P028,71,Female,Diabetes,31.8,146,213,Yes,7,No
+P029,59,Female,Hypertension,31.5,146,106,Yes,2,No
+P030,32,Female,Asthma,26.9,123,109,Yes,4,Yes
+P031,84,Female,Heart Disease,28.9,131,106,No,10,No
+P032,38,Female,Asthma,26.6,112,104,No,6,Yes
+P033,21,Male,Asthma,27.0,132,97,No,5,No
+P034,80,Male,Heart Disease,31.4,156,95,No,11,No
+P035,52,Female,Asthma,22.4,120,95,No,2,No
+P036,71,Female,Hypertension,27.9,174,121,No,7,No
+P037,51,Female,Hypertension,25.5,155,101,No,6,No
+P038,69,Male,Diabetes,36.9,150,194,No,9,No
+P039,60,Male,Asthma,27.4,134,100,No,7,No
+P040,73,Male,Heart Disease,27.6,162,125,Yes,11,Yes
+P041,43,Male,Healthy,21.1,120,85,No,2,No
+P042,52,Female,Heart Disease,29.5,139,126,No,9,No
+P043,59,Female,Healthy,25.6,106,100,No,1,No
+P044,35,Male,Healthy,25.9,123,76,Yes,3,No
+P045,77,Male,Hypertension,25.5,141,96,No,6,No
+P046,83,Female,Heart Disease,27.0,143,116,No,10,No
+P047,75,Male,Hypertension,33.2,175,112,Yes,6,No
+P048,70,Female,Diabetes,28.3,144,163,No,4,Yes
+P049,63,Female,Heart Disease,28.9,139,100,No,11,Yes
+P050,36,Female,Healthy,19.4,113,90,No,2,No
