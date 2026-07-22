@@ -22,20 +22,18 @@ This is the heart of the project. Work through the 6 modules in order. Each modu
 
 ```
 I have uploaded a dataset called patient_data.csv.
-What information does this dataset contain? Explain it to me like I am new to data analysis.
+What information does this dataset contain? Explain it to me like I am new to data analysis.  
 ```
 
 ### Prompt 1.2 — Basic count
 
 ```
-How many patients are in this dataset, and how many have each medical condition?
+How many patients are in this dataset, and how many have each medical condition? Could you perform some task like how many smokers, or how readmission relates to conditions?
 ```
 
 **What to notice:**
 - The AI can read the file and explain each column in plain English.
 - Even simple prompts work — but the answers are generic. The AI decides the format, length, and depth for you.
-
-**Your turn:** Ask how many patients are smokers.
 
 ---
 
@@ -63,8 +61,6 @@ disease-prevention point of view.
 - Run 2.1 and 2.2 in separate chats. The same data produces different insights depending on the role.
 - Formula so far: **Role + Task + Audience** = a much better answer than just a question.
 
-**Your turn:** Ask the same summary question with the role "hospital finance officer" — see how the focus shifts to costs and visits.
-
 ---
 
 ## Module 3 — Control the Output (Format Instructions)
@@ -82,8 +78,13 @@ From patient_data.csv, create a table with one row per medical condition, showin
 - average blood glucose
 Round all numbers to 1 decimal place.
 ```
+### Prompt 3.2 — Ask for a two columns table 
 
-### Prompt 3.2 — Ask for a strict structure
+```
+You are a healthcare data analyst.
+From patient_data.csv, create a two columns table for smokers vs. non-smokers, with one row per medical condition.
+```
+### Prompt 3.3 — Ask for a strict structure
 
 ```
 You are a healthcare data analyst.
@@ -100,7 +101,7 @@ Do not add anything outside this format.
 - The AI follows your structure. You designed the report; the AI filled it in.
 - Words like "EXACTLY" and "Do not add anything outside this format" keep the answer tight.
 
-**Your turn:** Ask for the smoker vs non-smoker comparison as a two-column table.
+
 
 ---
 
@@ -130,12 +131,31 @@ Check whether this is true in patient_data.csv. Show your calculation steps,
 then give a clear yes/no verdict with the numbers.
 ```
 
+### Prompt 4.3 — Risk Analysis for high blood sugar (over 120)
+
+```
+You are a clinical data analyst.
+Using patient_data.csv, identify whether patients with high blood glucose (over 120 ) are mostly diabetic. Think step by step:
+
+Step 1: List the patients in this dataset who have diabetes and high glucose level (over 120).
+Step 2: Explain the corelation between both conditions for each factor.
+Step 3: Give a clear yes/no verdict with the numbers
+```
+
+### Prompt 4.4 — Risk Analysis for Diabetics (high blood sugar (over 140))
+
+```
+You are a clinical data analyst.
+Using patient_data.csv, identify whether patients with high blood glucose (over 140 ) are mostly diabetic. Think step by step:
+
+Step 1: List the patients in this dataset who have diabetes and high glucose level (over 140).
+Step 2: Explain the corelation between both conditions for each factor.
+Step 3: Give a clear yes/no verdict with the numbers
+```
+
 **What to notice:**
 - "Think step by step" / "Show your calculation steps" makes the reasoning visible.
-- Prompt 4.2 is a **fact-checking pattern** — you'll reuse this constantly in real analytics work.
-
-**Your turn:** Ask it to check step by step whether patients with high blood glucose (over 140) are mostly diabetic.
-
+- Prompt 4.2, 4.3, 4.4 are a **fact-checking pattern** — you'll reuse this constantly in real analytics work.
 ---
 
 ## Module 5 — Show an Example (Few-Shot Prompting)
@@ -164,15 +184,13 @@ using their real values from the dataset.
 - You never described the format in words — you just showed it once, and the AI matched the layout, tone, and length.
 - Few-shot is the fastest way to get consistent output across many items.
 
-**Your turn:** Write your own example card style (make it different — maybe with emojis or shorter) and ask for 3 patients in *your* style.
-
 ---
 
 ## Module 6 — The Capstone: A Full Analytics Report (Combining Everything)
 
 **Skill:** Combine role + task + format + reasoning + constraints into one professional "mega-prompt". This is what real prompt engineering looks like.
 
-### Prompt 6.1 — The full report
+### Prompt 6.1 — The full report for Hospital leadership
 
 ```
 You are a senior healthcare data analyst preparing a report for hospital leadership.
@@ -198,7 +216,33 @@ RULES:
 - End with one line noting this is synthetic data for learning purposes.
 ```
 
-### Prompt 6.2 — Bonus: turn the report into a chart
+### Prompt 6.2 — The full report for Medical Autority
+
+```
+You are a nurse preparing a report for Medical authority.
+
+DATA: Use patient_data.csv (50 patients, synthetic data).
+
+TASK: Write a small report "wchich patients need follow-up calls" with these sections:
+
+1. NARRATIVE SUMMARY — 3 sentences max, plain English, no jargon.
+2. KEY METRICS — a small table: total patients, average age, % smokers,
+   % readmitted within 30 days.
+3. CONDITION BREAKDOWN — a table by condition: patient count, average age,
+   average glucose, average systolic BP.
+4. TOP 3 INSIGHTS — numbered list. Each insight must include a real number
+   from the data. Think through the data carefully before choosing them.
+5. RECOMMENDATIONS — Based ON DATA, which patients needs follow-up call mention with patient IDs.
+   
+
+RULES:
+- Use simple language a non-technical manager understands.
+- Every claim must be backed by a number from the dataset.
+- Do not invent data that is not in the file.
+- End with one line noting this is synthetic data for learning purposes.
+```
+
+### Prompt 6.3 — Turn the report into a chart
 
 ```
 Based on your report, create a simple bar chart of the average blood glucose
@@ -211,7 +255,6 @@ per condition.
 - Every module you learned is inside prompt 6.1: role (Module 2), format (Module 3), reasoning (Module 4), and strict rules that prevent the AI from making things up.
 - "Do not invent data that is not in the file" is a real technique for reducing AI **hallucinations** — a word you'll hear a lot in GenAI.
 
-**Your turn (final challenge):** Write your own mega-prompt from scratch for a different audience — for example, a report for nurses about which patients need follow-up calls. Use at least 3 techniques from this playbook.
 
 ---
 
