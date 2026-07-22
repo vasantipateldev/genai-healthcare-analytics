@@ -79,7 +79,6 @@ From patient_data.csv, create a table with one row per medical condition, showin
 Round all numbers to 1 decimal place.
 ```
 ### Prompt 3.2 — Ask for a two columns table 
-
 ```
 You are a healthcare data analyst.
 From patient_data.csv, create a two columns table for smokers vs. non-smokers, with one row per medical condition.
