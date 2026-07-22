@@ -28,7 +28,8 @@ What information does this dataset contain? Explain it to me like I am new to da
 ### Prompt 1.2 — Basic count
 
 ```
-How many patients are in this dataset, and how many have each medical condition? Could you perform some task like how many smokers, or how readmission relates to conditions?
+How many patients are in this dataset, and how many have each medical condition? Could you perform some task like 
+how many smokers, or how readmission relates to conditions?
 ```
 
 **What to notice:**
@@ -134,7 +135,8 @@ then give a clear yes/no verdict with the numbers.
 
 ```
 You are a clinical data analyst.
-Using patient_data.csv, identify whether patients with high blood glucose (over 120 ) are mostly diabetic. Think step by step:
+Using patient_data.csv, identify whether patients with high blood glucose (over 120 ) are mostly diabetic. 
+Think step by step:
 
 Step 1: List the patients in this dataset who have diabetes and high glucose level (over 120).
 Step 2: Explain the corelation between both conditions for each factor.
@@ -215,7 +217,7 @@ RULES:
 - End with one line noting this is synthetic data for learning purposes.
 ```
 
-### Prompt 6.2 — The full report for Medical Autority
+### Prompt 6.2 — The full report for Medical Authority
 
 ```
 You are a nurse preparing a report for Medical authority.
